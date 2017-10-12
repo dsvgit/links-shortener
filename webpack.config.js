@@ -8,9 +8,7 @@ const extractSass = new ExtractTextPlugin({
 });
 
 module.exports = {
-  entry: {
-    '/': './src/index.js'
-  },
+  entry: './src/index.js',
   output: {
     path: path.join(__dirname, 'build'),
     filename: '[name]/index.[hash].js',
@@ -20,7 +18,6 @@ module.exports = {
     extractSass,
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      chunks: ['/'],
       template: './src/index.ejs',
       inject: true
     }),
