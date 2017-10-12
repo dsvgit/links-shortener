@@ -1,0 +1,7 @@
+.textarea {
+  flex: 1;
+  outline: 0px !important;
+  -webkit-appearance:none;
+  border: none;
+  &::-webkit-input-placeholder { color: #373737; }
+}

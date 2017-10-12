@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.flex {
+  display: flex;
+  flex: 1;
+  resize: none;
+}
+
+.area {
+  padding: 10px;
+  background-color: #dcd0c0;
+  line-height: 1.7em;
+  font-size: 0.9em;
+}

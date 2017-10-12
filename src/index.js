@@ -1,14 +1,9 @@
-import styles from './index.scss';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-class Person {
-  constructor(name) {
-    this.name = name;
-  }
+import App from './app/components';
 
-  greeting() {
-    console.log('Hello, I am ', this.name);
-  }
-}
-
-let alex = new Person('Alex');
-alex.greeting();
+ReactDOM.render(
+  <App />,
+  document.getElementById('root')
+);
