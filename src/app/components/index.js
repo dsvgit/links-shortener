@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import _ from 'lodash';
 
 import Textarea from './textarea';
 import Resultarea from './resultarea';
@@ -17,11 +18,16 @@ export default class extends Component {
     };
   }
 
-  handleChangeText(text) {
-    this.setState({ text });
+  compileResult() {
+    const { text } = this.state;
+
     compileResult(text).then(html => {
       this.setState({ html });
-    });
+    })
+  }
+
+  handleChangeText(text) {
+    this.setState({ text }, this.compileResult);
   }
 
   render() {

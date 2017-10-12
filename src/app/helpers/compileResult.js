@@ -33,7 +33,8 @@ function replaceLinks(text) {
 
 function formatText(text, urls) {
   const withChangedLinks = String(text).replace(pattern, url => {
-    return urls[url];
+    const id = urls[url];
+    return `<a href="${id}">${id}</a>`;
   });
 
   const withLineBreaks = String(withChangedLinks).replace(/\n/g, '<br />');
@@ -57,7 +58,7 @@ function getUrlId(url) {
     const id = _.get(response, 'data.id');
     return id;
   }).catch(response => {
-    debugger;
+    return url;
   });
 }
 
