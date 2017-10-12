@@ -9,7 +9,7 @@ const extractSass = new ExtractTextPlugin({
 
 module.exports = {
   entry: {
-    'main/app': './src/apps/main/index.js'
+    '/': './src/index.js'
   },
   output: {
     path: path.join(__dirname, 'build'),
@@ -19,9 +19,9 @@ module.exports = {
   plugins: [
     extractSass,
     new HtmlWebpackPlugin({
-      filename: 'main/app/index.html',
-      chunks: ['main/app'],
-      template: './src/apps/main/index.ejs',
+      filename: 'index.html',
+      chunks: ['/'],
+      template: './src/index.ejs',
       inject: true
     }),
   ],
