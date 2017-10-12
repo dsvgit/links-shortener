@@ -1,4 +1,4 @@
-# Webpack 2 simple project
+# Links shortener
 
 ```
 npm i
