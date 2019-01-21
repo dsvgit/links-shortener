@@ -1,4 +1,4 @@
-# Links shortener
+# links-shortener v2
 
 ```
 npm i
